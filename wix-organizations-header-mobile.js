@@ -137,6 +137,10 @@ createMenu = () => {
   display: block;
   visibility: visible;
   opacity: 1;
+  z-index: 1;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
 }
 
 #mobile-menu-items a {
@@ -238,6 +242,10 @@ font-family: 'Raleway-SemiBold', Arial;
 
 #burger-menu-organisations span:nth-child(4) {
   bottom: 0;
+}
+
+#burger-menu-organisations.open {
+   position: fixed;
 }
 
 #burger-menu-organisations.open span:nth-child(1) {
