@@ -40,7 +40,8 @@
       return menuItem;
     };
 
-    const createMenu = () => {
+    
+createMenu = () => {
       const menuContainerWrapper = document.createElement('div');
       const menuContainer = document.createElement('ul');
       menuContainerWrapper.setAttribute('id', 'mobile-menu-items')
@@ -280,11 +281,11 @@ function initiateAltHeader() {
     }
 
     connectedCallback() {
-        this.initiateAltHeader();
     }
       
     
 }
+initiateAltHeader();
 
 
 customElements.define('wix-organizations-header-mobile', WixOrganizationsHeaderMobile);
