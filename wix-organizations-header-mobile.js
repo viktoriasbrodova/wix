@@ -140,7 +140,8 @@ createMenu = () => {
 }
 
 #mobile-menu-items a {
-  font-size: 20px;
+  font-size: 14px;
+font-family: 'Raleway-SemiBold', Arial;
   line-height: 50px;
   color: #000000;
   text-decoration: none;
