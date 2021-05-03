@@ -267,19 +267,25 @@
     };
 
 
-
+function initiateAltHeader() {
+  var app = document.querySelector('body');
+  app.appendChild(createStyle());
+  app.insertBefore(createHeader(), app.childNodes[0]);
+}
 
 
     class WixOrganizationsHeaderMobile extends HTMLElement {
     constructor() {
         super();
+        console.log(DEBUG_TEXT);
     }
 
     connectedCallback() {
-        this.appendChild(createStyle());   this.appendChild(createImageContainer());
-        this.appendChild(createHeader());
+        this.initiateAltHeader();
     }
+      
+    
 }
 
-customElements.define('wix-organizations-header-mobile', WixOrganizationsHeaderMobile);
 
+customElements.define('wix-organizations-header-mobile', WixOrganizationsHeaderMobile);
