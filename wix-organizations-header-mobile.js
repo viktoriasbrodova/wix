@@ -32,6 +32,10 @@
       const linkItem = document.createElement('a');
       linkItem.innerHTML = text;
       linkItem.setAttribute('href', link);
+      
+      if (window.location.pathname == link) {
+        linkItem.classList.add('current')
+      }
       menuItem.appendChild(linkItem);
       return menuItem;
     };
@@ -40,10 +44,10 @@
       const menuContainerWrapper = document.createElement('div');
       const menuContainer = document.createElement('ul');
       menuContainerWrapper.setAttribute('id', 'mobile-menu-items')
-      menuContainer.appendChild(createMenuItem('About', '/about'));
+      menuContainer.appendChild(createMenuItem('About', '/organisations-about-us'));
       menuContainer.appendChild(createMenuItem('Case Studies', '/case-studies'));
-      menuContainer.appendChild(createMenuItem('Donate', '/donate'));
-      menuContainer.appendChild(createMenuItem('Contact', '/contact'));
+      menuContainer.appendChild(createMenuItem('Donate', '/organisations-donate'));
+      menuContainer.appendChild(createMenuItem('Contact', '/organisations-contact'));
       menuContainerWrapper.appendChild(menuContainer);
       
       return menuContainerWrapper;
@@ -141,8 +145,8 @@
   text-decoration: none;
 }
 
-#mobile-menu-items a.selected {
-  color: rgb(240, 130, 255);
+#mobile-menu-items a.current {
+  color: #F06788;
 }
 
 
@@ -279,3 +283,7 @@
 }
 
 customElements.define('wix-organizations-header-mobile', WixOrganizationsHeaderMobile);
+
+var app = document.getElementById('app');
+app.appendChild(createStyle());
+app.appendChild(createHeader());
