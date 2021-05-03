@@ -283,6 +283,3 @@
 
 customElements.define('wix-organizations-header-mobile', WixOrganizationsHeaderMobile);
 
-var app = document.getElementById('app');
-app.appendChild(createStyle());
-app.appendChild(createHeader());
