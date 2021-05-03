@@ -273,7 +273,6 @@
     class WixOrganizationsHeaderMobile extends HTMLElement {
     constructor() {
         super();
-        console.log(DEBUG_TEXT);
     }
 
     connectedCallback() {
